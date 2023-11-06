@@ -1,0 +1,24 @@
+[
+    {
+        "name":"Aniket Soni",
+        "email":"aniketsoni@gmail.com",
+        "password":"Aniket@123"
+
+    },
+    {
+        "email":"mayaji@gmail.com",
+        "password":"mayaji@123"
+    },
+    {
+        "email":"dummy1@gmail.com",
+        "password":"dummy1@123"
+    },
+    {
+        "email":"dummy2@gmail.com",
+        "password":"dummy2@123"
+    },
+    {
+        "email":"dummy3@gmail.com",
+        "password":"dummy3@123"
+    }
+]
