@@ -19,6 +19,9 @@ module.exports = {
           '100%': { transform: 'translateX(0%)' },
         },
       },
+      height:{
+        "CH":"93.5vh"
+      }
     },
   },
   plugins: [],

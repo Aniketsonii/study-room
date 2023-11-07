@@ -1,25 +1,20 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import userdata from "../assets/data.json";
+import usersdata from "../assets/data.json";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
   const {register, handleSubmit, formState: { errors }} = useForm();
   const navigate = useNavigate();
   const onSubmit = (data) => {
-  const userData = userdata;
-  if (userData) {
-    // getItem can return actual value or null
-    if (
-      userData.filter((x) => x.password === data.password && x.email === data.email)) {
-        console.log(data.email + " You Are Successfully Logged In");
-        
-        navigate("/studyroom");
-      } else {
-        console.log("Email or Password is not matching with our record");
-      }
+    const userData = usersdata.find((user) => user.email === data.email);
+    if (!userData) {
+      alert("User with email id doesnot exists");
+    } else if (userData.password === data.password) {
+      console.log(data.email + " You Are Successfully Logged In");
+      navigate("/studyroom");
     } else {
-      console.log("Email or Password is not matching with our record");
+      alert("Password or email id doesnot exists");
     }
   };
   return (
